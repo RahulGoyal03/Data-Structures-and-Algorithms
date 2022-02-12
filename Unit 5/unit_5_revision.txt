@@ -1,0 +1,387 @@
+
+
+
+
+Unit-1 -> arrays, strings
+
+Unit-2 -> two pointers, sliding window, time complexity, Bubble Sort/Selection Sort
+
+Unit-3 -> stacks and queues, recursion, backtracking,
+
+Done till here
+
+
+
+ Quick Sort and Merge Sort
+
+Unit-4 -> Binary Search, Greedy, DP
+
+Unit-5 -> LinkedList, Basic of Graphs/Trees
+
+
+-----------------------------------------
+
+Arrays -> Collections of elements => 1-D, 2-D     -> You can access ith element in o(1) using arr[i]
+Strings -> Collection of Characters/alphabets => 1-D    -> You can access ith element using str[i] in O(1) time
+
+arr = [1, 3, -1, 5, 0,10]     str = "abczqwd"
+
+slice will be O(N)   ->  INDEX 0 to N  ->
+
+-------------------------------------------
+
+
+Two Pointers
+
+Technique to solve some kind of problems.
+
+Init will two pointers (p1, and p2).   
+Both pointers are start of array or 1 is at start and other is at end of the array.
+we decide some conditions based on which we move both the pointers.
+later on some "end condition" which stops all movement and we get the answer.
+
+
+Famous Problem :  
+
+Two Sum -> 
+Given N elements, in sorted order, you need to find two elements (a,b) such that a+b = K (where k is given)
+
+
+left = 0 index
+right = N-1 index
+
+if the cur_sum > K  -> right--     =>  X
+if cur_sum < K left++    => Y
+
+if cur_sum == k or left > right -> stop
+
+X + Y = N maximum
+
+
+
+obj[x]   -> O(constant)
+
+
+arr = [1, 3, 4, 7, 10, 10, 2, 13, -26]   -> index : value
+
+N = 8 elements
+K = 20
+
+
+
+obj = { [value, count] : 1,  "3": 1,  "4": 1, "7": 1,  "10": 1, "2": 1, }  -> value : index
+
+obj = {  [10, 1]: index, [10,2]: index }  -> hashmap
+
+
+
+
+
+for i = 0 to i = N-1:
+
+	x = arr[i]    // x=13
+
+	y = k - x   (i need to find a y such x+y = k) //y =7
+
+	if y in obj:   -> O(1)
+		return (x,y)  -> (13, 7)
+
+	obj[x] = i
+
+
+O(N)
+
+
+
+Diff of K 
+
+
+
+Sliding Window
+
+
+try to store information of elements between p1 and p2 in some data structure (array, objs, hashmaps)
+
+freq of elements between p1 and p2 or it can be number of unique elements between p1 and p2
+
+this stored information helps you decide whether you neeed to move p1 or p2 or both.
+
+Usually, p2 is moved to increase the size of window and p1 is moved to decreaes the size of window.
+
+
+Famous Problems:
+
+sub array with sum K
+
+
+
+
+
+biggest subarray size with k distinct letter/elements
+
+
+
+arr = [1, 3, 4, 1, 7, 3, 6, 10, 10, 2, 13, -26]
+
+K = 4
+
+p1 = 2
+p2 = 5
+
+
+
+obj = [ "1": 1, "3": 1, "7": 1, "6": 1]  => storing some information of elements between p1 and p2
+
+
+
+
+while p2 < N and p1 < N:
+	if no. of elements in the obj <= K:
+		// increase my window size
+		p2++
+
+		ans = max(ans, cur_window_size = p2-p1+1);
+	else:
+		// decrease my window size
+		p1++
+
+
+
+
+
+
+
+
+
+
+
+
+biggest subarray size with all elements present only once
+
+
+
+arr = [1, 3, 4, 1, 7, 3, 6, 10, 10, 2, 13, -26]  -> index: value
+
+K = 4
+
+p1 = 0
+p2 = 3
+
+
+
+
+obj = [ "1":true, "3": true, "4": true]  => storing some information of elements between p1 and p2
+
+
+while p2 < N and p1 < N:
+	if arr[p2] is in obj:
+		obj.remove(arr[p1]);
+		p1++;
+	else:
+		obj.add(arr[p2])
+		p2++;
+
+
+
+time complexity -> the relative units of time taken to solve a problem (in terms of size of input)
+space compleixty -> the relative units of space taken to sovle a problem (in terms of size of input)
+
+Binary Searching an element in sorted array -> logN
+
+Searchin an element in unsorted array - > O(N)
+
+
+
+
+
+Selection Sort/Bubble Sort
+
+Sorting -> arrange elements of an array in a specific order (usually ascending order).
+
+
+
+
+Selection Sort -> 
+
+Take smallest from the array and put it in new array, keep doing it till array is empty.
+
+operation x: taking/finding smallest element everytime -> O(N)
+
+You've to do operation X, N times.
+
+N x N = N^2.
+
+O(N^2)
+
+
+
+
+Bubble Sort ->
+
+compares two neighbour elements and puts the smaller element first.
+
+
+for i=0 to N-1:
+	for j = 0 to N-i-1:
+		if arr[j+1] > arr[j]:
+			swap(arr[j+1],arr[j]);
+
+
+
+
+ Count Sort (O(N)), Insertion Sort
+
+
+
+
+
+
+
+
+Sleep Sort  -> read about it
+Shuffle Sort -> keep shuffling array and check if it is sorted. -> o(infinite)
+
+
+Bucket Sort, Radix Sort, Tim Sort, Count Sort(Radix Sort + Quick Sort)
+
+ (Hybrid Sort -> Merge Sort+Quick Sort) -> smart algorithms
+
+
+
+
+
+
+
+
+
+
+
+
+Quick Sort
+Merge Sort
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function which can sort anything -> water bottle, chair or anything.
+
+
+helper_function(any X, any Y) if X > Y return True, else return False
+
+
+merge sort.
+
+small pieces use merge sort.
+
+
+
+
+
+
+
+
+stacks and queues
+
+
+
+stacks -> Elements which goes inside last, comes outside first.
+
+Last in, First out (LIFO)
+
+push(), pop(), top()/peek()
+
+
+Problem Statement: 
+
+Car in Side Lane -> famous problem
+Nearest Greater Element (Must do) 
+
+
+side_lane (empty)  => stack
+
+
+finising lane
+
+
+
+
+Queues -> Elements which goes in first, comes out first. (FIFO)
+
+push(), pop(), front()/peek()
+
+
+
+
+
+
+
+recursion
+
+
+function calling itself till we reach base condition
+
+
+
+1.  bigger problem broken down into smaller problem of similar kind.
+2. once you have a solution to a small enough problem, solve it directly.
+	or if problem is very small, solve it directly.
+
+
+
+fib(n):
+	
+	if n == 0:
+		return 1
+
+	if n == 1:
+		return 1
+
+	if n == 2:
+		return 2
+
+	ans = fib(n-1) + fib(n-2)
+
+
+	return ans
+
+
+
+Backtracking
+
+Nqueeues, Sudoku, Generate Subsequence, Generate Permutations.b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
