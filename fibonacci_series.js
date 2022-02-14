@@ -1,5 +1,5 @@
 function runProgram(input) {
-    //Enter 
+    //Ent
     input = input.trim().split("\n")
     var n = +input[0]
 
