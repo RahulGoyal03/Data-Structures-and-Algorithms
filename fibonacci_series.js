@@ -6,7 +6,7 @@ function runProgram(input) {
 }
 
 function fibonacciSeries(n) {
-    // Stop condition
+    // Stop cond
     if (n == 0)
         return 0;
 
