@@ -12,7 +12,6 @@ function phone_pad(ans,str){
        return
     }
     let digit = str.charAt(0) - "0"
-    // console.log(str.charAt(0))
     // console.log(digit)
     for(var i = (digit - 1) * 3; i < (digit*3); i++){
         let cha = (text.charCodeAt(0) + i)
