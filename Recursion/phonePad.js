@@ -1,5 +1,5 @@
 function runProgram(input) {
-   //Enter
+   //E
    var str = input
    var ans = ""
    phone_pad(ans,str)
