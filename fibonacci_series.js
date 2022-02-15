@@ -8,7 +8,7 @@ function runProgram(input) {
 function fibonacciSeries(n) {
      if (n == 0)
         return 0;
-    // St
+    
     if (n == 1 || n == 2)
         return 1;
 
