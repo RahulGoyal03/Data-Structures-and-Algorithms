@@ -12,7 +12,7 @@ function fibonacciSeries(n) {
     if (n == 1 || n == 2)
         return 1;
 
-    // Recursion func
+    // Recursion f
     else
         return (fibonacciSeries(n - 1) + fibonacciSeries(n - 2));
 }
