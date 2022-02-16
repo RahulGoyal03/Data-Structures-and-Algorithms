@@ -32,7 +32,7 @@ function discoverNumber(arr, N, target) {
 
 }
 
-if (process.env.USERNAME == "Girraj Goyal") {
+if (process.env.USERNAME == "DELL") {
     runProgram(`5 10
     50 40 30 20 10
     10
