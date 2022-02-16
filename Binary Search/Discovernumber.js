@@ -1,5 +1,5 @@
 function runProgram(input) {
-     //Enter code
+     //Enter code here
     var input = input.trim().split("\n")
     var [N, Q] = input[0].trim().split(" ").map(Number)
 
