@@ -1,5 +1,5 @@
 // function runProgram(input) {
-//    //Enter the code 
+//    //Enter the 
 //    input = input.trim().split("\n")
 //    let[r,c] = input[0].trim().split(" ").map(Number)
 //    let maze = []
