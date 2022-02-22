@@ -22,8 +22,7 @@ function CipherString(n,str) {
             }
             
         }
-        strComp += str[i] + count;
-
+        strComp += str[i] + count
     }
 
     console.log(strComp);
