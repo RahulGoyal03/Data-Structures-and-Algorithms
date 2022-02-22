@@ -1,5 +1,5 @@
 function runProgram(input) {
-  //Enter the o
+  //Enter the 
   input = input.trim().split("\n");
   var testCases = input[0].trim();
   var line = 1;
