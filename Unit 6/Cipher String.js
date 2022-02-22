@@ -1,5 +1,5 @@
 function runProgram(input) {
-  //Enter t
+  
   input = input.trim().split("\n");
   var testCases = input[0].trim();
   var line = 1;
